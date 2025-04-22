@@ -135,32 +135,31 @@ def delete(id):
     update_JSON()
     
 def list():
-    print("\nList of all tasks:\n")
+    print("List of all tasks:\n")
     for task in taskList:
         if task["id"] > 0:
-            print(task["id"], ". ", task["description"])
-    print("\n")
+            print(task["description"])
 
 def listDone():
-    print("\nList of completed tasks:\n")
+    print("List of completed tasks:\n")
     for task in taskList:
         if task["id"] > 0:
             if task["status"] == "done":
                 print(task["description"])
 
 def listInProgress():
-    print("\nList of tasks in progress:\n")
+    print("List of tasks in progress:\n")
     for task in taskList:
         if task["id"] > 0:
             if task["status"] == "in progress":
-                print(task["id"], ". ", task["description"])
+                print(task["description"])
 
 def listToDo():
-    print("\nList of tasks yet to be done:\n")
+    print("List of tasks yet to be done:\n")
     for task in taskList:
         if task["id"] > 0:
             if task["status"] == "todo":
-                print(task["id"], ". ", task["description"])
+                print(task["description"])
 
 if __name__ == "__main__":
     try:
